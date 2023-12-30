@@ -1,0 +1,24 @@
+{% extends "base.html" %} 
+
+{% block title %} 
+All Players
+{% endblock %}
+
+{% block content %}
+<h1>All Players</h1>
+
+<form id="dataForm">
+    <label for="playerTag">Enter Player Tag:</label>
+    <input type="text" id="playerTag" name="playerTag">
+    <button type="submit">Get Player Info</button>
+</form>
+
+<u1>
+    {% for player in players %}
+    <li>
+        {{ player.username }}
+        {{ player.trophies }}
+    </li>
+    {% endfor %}
+</u1>
+{% endblock %}
